@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    background: url(./images/Background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+/*
+La propiedad CSS outline es una forma reducida para establecer una o más de las propiedades 
+individuales de contorno outline-style, outline-width y outline-color en una sola declaración. 
+En la mayoría de los casos el uso de este atajo es preferible y más conveniente.
+La propiedad CSS outline-offset es usada para establecer el espacio entre un contorno outline 
+y el límite o borde de un elemento. Un contorno es una línea que se dibuja al rededor 
+de los elementos, fuera de los límites de su borde.
+La propiedad CSS overflow  especifica: si recortar contenido, 
+dibujar barras de desplazamiento o mostrar el contenido excedente en un elemento a nivel de bloque. 
+Visible por defecto. Hidden y scroll. CONTROLA EL DESBORDE DE LA CAJA
+
+.card {
+    display: inline-block;
+    border-radius: 20%;
+    width: 250px;
+    height: 400px;
+    margin: 20px;
+    background-color: #333;
+    outline: 5px solid rgba(255, 255, 255, .5);
+    outline-offset: -8px;
+    box-shadow: 3px 3px 10 px rgba(0, 0, 0, -1);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .6;
+    transition: transform .75s;
+}
+
+.card:hover .card-image{
+    transform: scale(1.15);
+}
+
+.card-title {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    font-size: 20px;
+    text-shadow: 0 0 1px rgba(165, 137, 14, 0.5);
+    color: white;
+}
+
+*/
+
+.texto {
+    width: 20%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inputusuario, .inputpassword, .botoningresar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    border-width: 2px;
+    background-color: rgb(231, 227, 227);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.botoningresar {
+    margin-top: 125px;
+    height: 55px;
+    width: 90px;
+}
