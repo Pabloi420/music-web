@@ -6,6 +6,18 @@ class Clients {
     }
 }
 
-clientUno= new Clients (45,"hola", "chau");
+allClients=[];
 
-console.log(clientUno)
+clientOne = new Clients (1,"Jose", "Jose1");
+clientTwo = new Clients (2,"Eduardo", "Eduardo1");
+clientThree = new Clients (3,"Julia", "Julia1");
+
+allClients.push(clientOne,clientTwo,clientThree);
+
+allClients.forEach(e => {
+    if (nombre==e.user&&contraseña==e.password) {
+        return("Ingresa")
+    } else {
+        console.log("no ingresa")
+    }
+});

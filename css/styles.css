@@ -1,9 +1,63 @@
+.texto, .textoTitulo {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 300;
+}
+
+.inputusuario, .inputpassword, .botoningresar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    border-width: 2px;
+    background-color: rgb(231, 227, 227);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.botoningresar {
+    margin-top: 125px;
+    height: 55px;
+    width: 90px;
+}
+
+@media only screen and (max-width: 600px) {
+body {
+    margin: 0;
+    background: url(./images/Background-Responsive.jpg);
+}
+.texto, .textoTitulo {
+    height: 10px;
+    margin-bottom: 25px;
+}
+.textoTitulo {
+    margin-top: 6px;
+    margin-bottom: 32px;
+}
+.usuario {
+    margin-top: 25px;
+}
+.botoningresar {
+    margin-top: 75px;
+    height: 55px;
+    width: 90px;
+}
+}
+
+@media only screen and (min-width: 1200px) {
 body {
     margin: 0;
     background: url(./images/Background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
+.texto, .textoTitulo {
+    width: 20%;
+}
+}
+
 
 
 
@@ -56,27 +110,3 @@ Visible por defecto. Hidden y scroll. CONTROLA EL DESBORDE DE LA CAJA
 }
 
 */
-
-.texto {
-    width: 20%;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.inputusuario, .inputpassword, .botoningresar {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 15px;
-    border-width: 2px;
-    background-color: rgb(231, 227, 227);
-    text-align: center;
-    margin-top: 20px;
-}
-
-.botoningresar {
-    margin-top: 125px;
-    height: 55px;
-    width: 90px;
-}
