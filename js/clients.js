@@ -14,6 +14,10 @@ clientThree = new Clients (3,"Julia", "Julia1");
 
 allClients.push(clientOne,clientTwo,clientThree);
 
+
+
+
+/*
 allClients.forEach(e => {
     if (nombre==e.user&&contraseña==e.password) {
         return("Ingresa")
@@ -21,3 +25,4 @@ allClients.forEach(e => {
         console.log("no ingresa")
     }
 });
+*/
