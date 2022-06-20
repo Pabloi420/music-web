@@ -50,6 +50,7 @@ body {
 }
 .nav {
     padding: 7%;
+    text-decoration: none;
 }
 }
 
@@ -63,12 +64,21 @@ body {
 .texto, .textoTitulo {
     width: 20%;
 }
+.nav {
+    margin: 2%;
+    padding: 1%;
+    display: flex;
+    justify-content: space-around;
+}
 .linkmenu {
-    padding: 7% 9%;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 300;
-    font-style: unset;
+    text-decoration: none;
     color: black;
+}
+.contenedorSearch {
+    display: flex;
+    justify-content: center;
 }
 }
 
