@@ -57,7 +57,7 @@ body {
 @media only screen and (min-width: 1200px) {
 body {
     margin: 0;
-    background-color: rgb(252, 191, 188);
+    background-color: #ef4b4c;
 }
 .texto, .textoTitulo {
     width: 20%;
@@ -68,14 +68,19 @@ body {
     display: flex;
     justify-content: space-around;
 }
+.separador {
+    background-color: #3e619b;
+}
 .linkmenu, h2 {
     font-family: 'Courier New', Courier, monospace;
     font-weight: 300;
     text-decoration: none;
-    color: white;
+    color: #e9e9eb;
+    padding: 1%;
+}
+.linkmenu {
     border-radius: 15%;
     border-style: solid;
-    padding: 1%;
 }
 .contenedorSearch {
     display: flex;
@@ -84,50 +89,25 @@ body {
 .inputBuscador {
     margin: 0 1%;
     width: 25%;
-    background-color: rgb(128, 128, 128);
-    color: #ffff;
+    background-color: #e9e9eb;
+    color: #3e619b;
+    font-family: 'Courier New', Courier, monospace;
 }
-.section {
-    background-color: gray;
-}
-.card {
-    background-color: red;
-    width: 15%;
-    margin: 2%;
-    display: inline-block;
-    border-radius: 15%;
-}
-}
-
-
-
-
-/*
-La propiedad CSS outline es una forma reducida para establecer una o más de las propiedades 
-individuales de contorno outline-style, outline-width y outline-color en una sola declaración. 
-En la mayoría de los casos el uso de este atajo es preferible y más conveniente.
-La propiedad CSS outline-offset es usada para establecer el espacio entre un contorno outline 
-y el límite o borde de un elemento. Un contorno es una línea que se dibuja al rededor 
-de los elementos, fuera de los límites de su borde.
-La propiedad CSS overflow  especifica: si recortar contenido, 
-dibujar barras de desplazamiento o mostrar el contenido excedente en un elemento a nivel de bloque. 
-Visible por defecto. Hidden y scroll. CONTROLA EL DESBORDE DE LA CAJA
 
 .card {
     display: inline-block;
     border-radius: 20%;
-    width: 250px;
-    height: 400px;
-    margin: 20px;
+    width: 15%;
+    margin: 2%;
+    height: 200px;
     background-color: #333;
-    outline: 5px solid rgba(255, 255, 255, .5);
+    outline: 5px solid #ef4b4c;
     outline-offset: -8px;
     box-shadow: 3px 3px 10 px rgba(0, 0, 0, -1);
     position: relative;
     overflow: hidden;
 }
-
-.card-image{
+.imagen-card {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -136,18 +116,15 @@ Visible por defecto. Hidden y scroll. CONTROLA EL DESBORDE DE LA CAJA
     opacity: .6;
     transition: transform .75s;
 }
-
-.card:hover .card-image{
-    transform: scale(1.15);
+.card:hover .imagen-card {
+    transform: scale(1.25);
 }
-
 .card-title {
+    color: #e9e9eb;
     position: absolute;
-    left: 15px;
+    left: 65px;
     bottom: 15px;
     font-size: 20px;
-    text-shadow: 0 0 1px rgba(165, 137, 14, 0.5);
-    color: white;
+    text-shadow: 0 0 1px rgba(0, 0, 0, .5);
 }
-
-*/
+}

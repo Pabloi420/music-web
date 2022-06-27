@@ -1,23 +1,19 @@
 class Artista {
-    constructor (id, nombre, apellido, genero){
-        id=this.id;
-        nombre=this.nombre;
-        apellido=this.apellido;
-        genero=this.genero;
+    constructor (id, nombre, genero){
+        this.id=id;
+        this.nombre=nombre;
+        this.genero=genero;
     }
 }
 
-class Disco extends Artista {
-    constructor (nombreDisco, añoDisco, genero) {
-        _nombreDisco=this.nombreDisco;
-        _añoDisco=this.añoDisco;
-        _genero=this.genero
-    }
-    super (id, nombre, apellido, genero) {
-        
-    }
-}
+let jimi = new Artista (1, "Jimi Hendrix", "Rock");
+let ray = new Artista (2, "Ray Charles", "R&B");
+let miles = new Artista (3, "Miles Davis", "Jazz");
+let beatles = new Artista (4, "The Beatles", "Rock");
+let rolling = new Artista (5, "The rolling stones", "Rock");
 
-let discoUno=new Disco ("hola",1973, "blues");
+let artistas =[]
 
-console.log (discoUno._añoDisco);
+artistas.push(jimi, ray, miles, beatles, rolling);
+
+console.log (artistas);
