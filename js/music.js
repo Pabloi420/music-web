@@ -12,8 +12,7 @@ let miles = new Artista (3, "Miles Davis", "Jazz");
 let beatles = new Artista (4, "The Beatles", "Rock");
 let rolling = new Artista (5, "The rolling stones", "Rock");
 
-let artistas =[]
+let artistasRecomendados =[]
 
-artistas.push(jimi, ray, miles, beatles, rolling);
+artistasRecomendados.push(jimi, ray, miles, beatles, rolling);
 
-console.log (artistas);

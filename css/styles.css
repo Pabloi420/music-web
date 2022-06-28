@@ -103,7 +103,6 @@ body {
     background-color: #333;
     outline: 5px solid #ef4b4c;
     outline-offset: -8px;
-    box-shadow: 3px 3px 10 px rgba(0, 0, 0, -1);
     position: relative;
     overflow: hidden;
 }
@@ -119,12 +118,17 @@ body {
 .card:hover .imagen-card {
     transform: scale(1.25);
 }
-.card-title {
+.card-title, .card-genre {
     color: #e9e9eb;
     position: absolute;
-    left: 65px;
-    bottom: 15px;
+    left: 10px;
+    bottom: 125px;
     font-size: 20px;
     text-shadow: 0 0 1px rgba(0, 0, 0, .5);
+}
+.card-genre {
+    bottom: 100px;
+    left: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 }
