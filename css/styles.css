@@ -63,13 +63,14 @@ body {
     width: 20%;
 }
 .nav {
-    margin: 2%;
+    margin: 1%;
     padding: 1%;
     display: flex;
     justify-content: space-around;
 }
 .separador {
-    background-color: #3e619b;
+    color: #e9e9eb;
+    border-bottom-style: solid;
 }
 .linkmenu, h2 {
     font-family: 'Courier New', Courier, monospace;
@@ -79,17 +80,23 @@ body {
     padding: 1%;
 }
 .linkmenu {
-    border-radius: 15%;
-    border-style: solid;
+    border-bottom-style: solid;
+}
+.linkmenu:hover {
+    color: #3e619b;
+    background-color: #e9e9eb;
+    border-radius: 15px;
 }
 .contenedorSearch {
     display: flex;
-    justify-content: center;
+    justify-content: end;
+    padding: 2% 2%;
 }
 .inputBuscador {
     margin: 0 1%;
     width: 25%;
     background-color: #e9e9eb;
+    border-radius: 15px;
     color: #3e619b;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -99,7 +106,7 @@ body {
     border-radius: 20%;
     width: 15%;
     margin: 2%;
-    height: 200px;
+    height: 250px;
     background-color: #333;
     outline: 5px solid #ef4b4c;
     outline-offset: -8px;
@@ -122,13 +129,18 @@ body {
     color: #e9e9eb;
     position: absolute;
     left: 10px;
-    bottom: 125px;
+    bottom: 175px;
     font-size: 20px;
     text-shadow: 0 0 1px rgba(0, 0, 0, .5);
 }
 .card-genre {
-    bottom: 100px;
+    bottom: 150px;
     left: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.soloHoy {
+    height: 700px;
+    background-image: url(./images/premium\ version.jpg);
+    background-size: cover;
 }
 }
