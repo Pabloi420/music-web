@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200&family=Roboto:wght@100&family=Vollkorn:ital,wght@0,400;1,900&display=swap');
+
 .texto, .textoTitulo, .textoIngresar {
     text-align: center;
     margin-left: auto;
@@ -57,34 +59,34 @@ body {
 @media only screen and (min-width: 1200px) {
 body {
     margin: 0;
-    background-color: #ef4b4c;
+    background-color: #ff8689;
 }
 .texto, .textoTitulo {
     width: 20%;
 }
 .nav {
-    margin: 1%;
+    margin: 0%;
     padding: 1%;
     display: flex;
     justify-content: space-around;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color: #ffdb70;
+    background-color: #ffdb70;
 }
 .separador {
     color: #e9e9eb;
     border-bottom-style: solid;
 }
 .linkmenu, h2 {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Karla', sans-serif;
     font-weight: 300;
     text-decoration: none;
-    color: #e9e9eb;
+    color: #2e2e2e;
     padding: 1%;
 }
-.linkmenu {
-    border-bottom-style: solid;
-}
 .linkmenu:hover {
-    color: #3e619b;
-    background-color: #e9e9eb;
+    background-color: #f0ede4;
     border-radius: 15px;
 }
 .contenedorSearch {
@@ -99,6 +101,7 @@ body {
     border-radius: 15px;
     color: #3e619b;
     font-family: 'Courier New', Courier, monospace;
+    text-align: center;
 }
 
 .card {
@@ -108,7 +111,7 @@ body {
     margin: 2%;
     height: 250px;
     background-color: #333;
-    outline: 5px solid #ef4b4c;
+    outline: 5px solid #d4a37d;
     outline-offset: -8px;
     position: relative;
     overflow: hidden;
@@ -142,5 +145,12 @@ body {
     height: 700px;
     background-image: url(./images/premium\ version.jpg);
     background-size: cover;
+}
+.botonBuscador {
+    border-radius: 15px;
+    background-color: #2e2e2e;
+    color: #e9e9eb;
+    padding: 8px;
+    border-color: #e9e9eb;
 }
 }
