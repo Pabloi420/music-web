@@ -1,156 +1,93 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200&family=Roboto:wght@100&family=Vollkorn:ital,wght@0,400;1,900&display=swap');
 
-.texto, .textoTitulo, .textoIngresar {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 300;
-    color: black;
-}
+@media (min-width:961px) {
+    body {
+        margin: 0;
+    }
+    h1, h3 {
+        color: #fe9870;
+        font-family: 'Edu VIC WA NT Beginner', cursive
+            }
+    input {
+        font-family: 'Edu VIC WA NT Beginner', cursive;
+        text-align: center;
+    }
+    p{
+        font-family: 'Edu VIC WA NT Beginner', cursive
+    }
+    .izquierda {
+        background-color: #31364c;
+        float: left;
+        margin: 0;
+        width: 30%;
+        height: 100vh;
+        text-align: center;
+    }
+    .boxIngreso {
+        margin: 15%;
+    }
+    .derecha {
+        background-color: #fe9870;
+        float: left;
+        margin: 0;
+        width: 70%;
+        height: 100vh;
+    }
+    .slogan {
+        float: right;
+        font-size: 250%;
+        color: #31364c;
+        margin-top: 85vh;
+        padding: 2%;
+    }
+    .enlaceIngresar {
+        display: block;
+        margin: 12%;
+        color: #fe9870;
+        border-style: solid;
+        padding: 2%;
+        text-decoration: none;
+    }
+    .ingresar {
+        margin: 2%;
+    }
 
-.inputusuario, .inputpassword, .botoningresar, .usuario {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 15px;
-    border-width: 2px;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.botoningresar {
-    margin-top: 125px;
-    height: 55px;
-    width: 90px;
-}
-
-.noneClick {
-    pointer-events: none;
-}
-
-@media only screen and (max-width: 600px) {
-body {
-    margin: 0;
-    background: url(./images/Background-Responsive.jpg);
-}
-.texto, .textoTitulo {
-    height: 10px;
-    margin-bottom: 5%;
-}
-.textoTitulo {
-    margin-top: 3%;
-    margin-bottom: 9%;
-}
-.botoningresar {
-    margin-top: 20%;
-    height: 55px;
-    width: 90px;
-}
-.textoIngresar{
-    padding-top: 15px;
-}
-.nav {
-    padding: 7%;
-    text-decoration: none;
-}
-}
-
-@media only screen and (min-width: 1200px) {
-body {
-    margin: 0;
-    background-color: #ff8689;
-}
-.texto, .textoTitulo {
-    width: 20%;
-}
-.nav {
-    margin: 0%;
-    padding: 1%;
-    display: flex;
-    justify-content: space-around;
-    border-top-style: solid;
-    border-bottom-style: solid;
-    border-color: #ffdb70;
-    background-color: #ffdb70;
-}
-.separador {
-    color: #e9e9eb;
-    border-bottom-style: solid;
-}
-.linkmenu, h2 {
-    font-family: 'Karla', sans-serif;
-    font-weight: 300;
-    text-decoration: none;
-    color: #2e2e2e;
-    padding: 1%;
-}
-.linkmenu:hover {
-    background-color: #f0ede4;
-    border-radius: 15px;
-}
-.contenedorSearch {
-    display: flex;
-    justify-content: end;
-    padding: 2% 2%;
-}
-.inputBuscador {
-    margin: 0 1%;
-    width: 25%;
-    background-color: #e9e9eb;
-    border-radius: 15px;
-    color: #3e619b;
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
+    .card {
+        display: inline-block;
+        border-radius: 20%;
+        width: 15%;
+        margin: 2%;
+        height: 250px;
+        background-color: #333;
+        outline: 5px solid #d4a37d;
+        outline-offset: -8px;
+        position: relative;
+        overflow: hidden;
+    }
+    .imagen-card {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: .6;
+        transition: transform .75s;
+    }
+    .card:hover .imagen-card {
+        transform: scale(1.25);
+    }
+    .card-title, .card-genre {
+        color: #e9e9eb;
+        position: absolute;
+        left: 10px;
+        bottom: 175px;
+        font-size: 20px;
+        text-shadow: 0 0 1px rgba(0, 0, 0, .5);
+    }
+    .card-genre {
+        bottom: 150px;
+        left: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
 }
 
-.card {
-    display: inline-block;
-    border-radius: 20%;
-    width: 15%;
-    margin: 2%;
-    height: 250px;
-    background-color: #333;
-    outline: 5px solid #d4a37d;
-    outline-offset: -8px;
-    position: relative;
-    overflow: hidden;
-}
-.imagen-card {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: .6;
-    transition: transform .75s;
-}
-.card:hover .imagen-card {
-    transform: scale(1.25);
-}
-.card-title, .card-genre {
-    color: #e9e9eb;
-    position: absolute;
-    left: 10px;
-    bottom: 175px;
-    font-size: 20px;
-    text-shadow: 0 0 1px rgba(0, 0, 0, .5);
-}
-.card-genre {
-    bottom: 150px;
-    left: 10px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.soloHoy {
-    height: 700px;
-    background-image: url(./images/premium\ version.jpg);
-    background-size: cover;
-}
-.botonBuscador {
-    border-radius: 15px;
-    background-color: #2e2e2e;
-    color: #e9e9eb;
-    padding: 8px;
-    border-color: #e9e9eb;
-}
-}
+
