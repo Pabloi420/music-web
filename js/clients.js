@@ -17,12 +17,3 @@ allClients.push(clientOne,clientTwo,clientThree);
 
 
 
-/*
-allClients.forEach(e => {
-    if (nombre==e.user&&contraseña==e.password) {
-        return("Ingresa")
-    } else {
-        console.log("no ingresa")
-    }
-});
-*/
