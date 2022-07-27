@@ -4,8 +4,12 @@ let ingresar=document.getElementsByClassName("enlaceIngresar")[0];
 let masEscuchados=document.getElementsByClassName("tusEscuchados");
 let recomendados=document.getElementsByClassName("recomendados");
 let tendencia=document.getElementsByClassName("tendencia");
+let buscador=document.getElementsByClassName("inputBuscador")[0];
 
 //pensar como incorporar imagenes dinamicamentes//
+buscador.addEventListener("keyup", function(){
+    console.log(buscador.value)
+})
 
 function crearSeccion (seccion, artistas) {
     artistas.forEach(e => {
@@ -42,3 +46,4 @@ ingresar.addEventListener("click", function(){
     });
     }
 )
+

@@ -24,6 +24,7 @@ let babasonicos=new Artista (13, "Babasonicos", "Rock");
 let pericos=new Artista (14, "Los Pericos", "Reggae");
 let bob=new Artista (15, "Bob Marley", "Reggae");
 
+
 let artistasEscuchados = [];
 let artistasRecomendados=[]; 
 let artistasTendencia=[];
@@ -32,3 +33,6 @@ artistasEscuchados.push (beastie,jamesBrown,oasis,frank,police);
 artistasRecomendados.push(jimi, ray, miles, beatles, rolling);
 artistasTendencia.push(soda, daft,babasonicos,pericos,bob);
 
+let artistasTodos=artistasEscuchados.concat(artistasRecomendados, artistasTendencia);
+
+console.log(artistasTodos)
