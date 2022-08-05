@@ -34,5 +34,3 @@ artistasRecomendados.push(jimi, ray, miles, beatles, rolling);
 artistasTendencia.push(soda, daft,babasonicos,pericos,bob);
 
 let artistasTodos=artistasEscuchados.concat(artistasRecomendados, artistasTendencia);
-
-console.log(artistasTodos)
