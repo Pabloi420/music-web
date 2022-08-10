@@ -1,14 +1,15 @@
 // Pensar como incorporar imagen de fondo //
 
 class Artista {
-    constructor (id, nombre, genero){
+    constructor (id, nombre, genero, imagen){
         this.id=id;
         this.nombre=nombre;
         this.genero=genero;
+        this.imagen=imagen;
     }
 }
 
-let jimi = new Artista (1, "Jimi Hendrix", "Rock");
+let jimi = new Artista (1, "Jimi Hendrix", "Rock", "../css/images/miles.jpg");
 let ray = new Artista (2, "Ray Charles", "R&B");
 let miles = new Artista (3, "Miles Davis", "Jazz");
 let beatles = new Artista (4, "The Beatles", "Rock");
