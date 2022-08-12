@@ -21,7 +21,8 @@ function crearSeccion (seccion, artistas) {
         genero.classList.add("card-genre");
         let imagen=document.createElement("img");
         card.appendChild(imagen);
-        imagen.src=e.imagen;
+        console.log(typeof(e.imagen))
+        imagen.setAttribute("src", e.imagen)
         imagen.classList.add("imagen-card");
     })
 }
