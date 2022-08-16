@@ -2,7 +2,6 @@ let masEscuchados=document.getElementsByClassName("tusEscuchados");
 let recomendados=document.getElementsByClassName("recomendados");
 let tendencia=document.getElementsByClassName("tendencia");
 let buscador=document.getElementsByClassName("inputBuscador")[0];
-let contenido=document.getElementById("contenido");
 let seccion=document.getElementsByClassName("section");
 
 
@@ -26,23 +25,37 @@ function crearSeccion (seccion, artistas) {
         imagen.classList.add("imagen-card");
     })
 }
+/*
+function crearContenido () {
+    let contenido=document.createElement("div");
+    document.body.appendChild(contenido)
+    let secciones = ["tusEscuchados", "recomendados", "soloHoy", "tendencia"]
+    secciones.forEach(e => {
+        let section = document.createElement("div");
+        let titulo = document.createElement("h2");
+        contenido.appendChild(section);
+        section.appendChild(titulo);
+        section.classList.add ("section");
+        section.classList.add (e)
+    });
+}
 
-
+buscador.addEventListener("keyup", function(){
+    let palabraBuscada=buscador.value;
+    let existe=artistasTodos.filter(artista=>artista.nombre===palabraBuscada);
+    console.log(existe);
+})
+*/
 
 //pensar como incorporar imagenes dinamicamentes//
+
 buscador.addEventListener("keyup", function(){
     let palabraBuscada=buscador.value;
     if (palabraBuscada.length>=3) {
-        //remover nodos//
+        document.getElementById("contenido").remove()
         //que aparezca card usando crear seccion//
     } else {
-        console.log ("vuelve menu original")
-    }
-    for (const artista of artistasEscuchados) {
-        if (artista.nombre==palabraBuscada) {
-            //debe aparecer busqueda o mensaje de que no//
-            console.log("hola")
-        }
+        
     }
 })
 

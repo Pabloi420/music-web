@@ -5,10 +5,10 @@ let contraseña=document.getElementsByClassName("inputContraseña");
 ingresar.addEventListener("click", function(){
     allClients.forEach(e => {
         if (usuario[0].value==e.user&&contraseña[0].value==e.password) {
-            //habilita ingreso//
-            alert("Ingresa")
+            ingresar.classList.remove("disabled");
+            alert ("Ingresa")
         } else {
-            //no habilita ingreso//
+            ingresar.classList.add("disabled");
             alert("No ingresa")
         }
     });
