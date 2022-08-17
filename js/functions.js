@@ -50,12 +50,10 @@ buscador.addEventListener("keyup", function(){
 //pensar como incorporar imagenes dinamicamentes//
 
 buscador.addEventListener("keyup", function(){
-    let palabraBuscada=buscador.value;
-    if (palabraBuscada.length>=3) {
-        document.getElementById("contenido").remove()
-        //que aparezca card usando crear seccion//
-    } else {
-        
+    for (const artista of artistasEscuchados) {
+        if (artista.nombre.toLowerCase().includes(buscador.value.toLowerCase())){
+            console.log(artista.nombre)
+        }
     }
 })
 
