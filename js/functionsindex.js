@@ -23,7 +23,7 @@ ingresar.addEventListener("click", function(){
 let ultimoUsuario = localStorage.getItem ('ultimoUsuario');
 if (!ultimoUsuario) {
     let bienvenida=document.createElement("h3");
-    bienvenida.innerText="Bienvenido";
+    bienvenida.innerText="Bienvenido!!";
     boxIngreso[0].appendChild(bienvenida);
     localStorage.setItem("ultimoUsuario", "Pablo");
 } else {
@@ -31,7 +31,7 @@ if (!ultimoUsuario) {
     usuario.value=ultimoUsuario;
     let btnUsuario=document.createElement("a");
     btnUsuario.classList.add ("enlaceIngresar");
-    btnUsuario.setAttribute("src", "./menu.html")
+    btnUsuario.setAttribute("href", "./index.html")
     let pbtnUsuario=document.createElement("p");
     pbtnUsuario.classList.add("Ingresar");
     boxIngreso[0].appendChild(btnUsuario);
