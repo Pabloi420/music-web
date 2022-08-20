@@ -1,34 +1,29 @@
 let ingresar=document.getElementsByClassName("enlaceIngresar")[0];
-let usuario=document.getElementsByClassName("inputUsuario")[0];
+let usuario=document.getElementsByClassName("inputUsuario");
 let boxIngreso=document.getElementsByClassName("boxIngreso");
 let contraseña=document.getElementsByClassName("inputContraseña");
-
+let ultimoUsuario = localStorage.getItem ('ultimoUsuario');
 
 //corroborar usuario y contraseña//
 ingresar.addEventListener("click", function(){
     allClients.forEach(e => {
-        if (usuario[0].value==e.user&&contraseña[0].value==e.password) {
-            ingresar.classList.remove("disabled");
-            alert ("Ingresa")
+        console.log(usuario[0].value)
+        if (usuario[0].value==e.user&&contraseña[0].value==e.password) {    
+            localStorage.setItem("ultimoUsuario", usuario[0].value);
+            alert ("Permitir ingreso");
         } else {
-            ingresar.classList.add("disabled");
-            alert("No ingresa")
+            alert("No permitir ingreso")
         }
     });
     }
 )
 
-//uso de storage para traer datos dentro de input, fijarse que el set item tome el valor del ultimo usuario que ingreso//
-
-let ultimoUsuario = localStorage.getItem ('ultimoUsuario');
 if (!ultimoUsuario) {
     let bienvenida=document.createElement("h3");
     bienvenida.innerText="Bienvenido!!";
     boxIngreso[0].appendChild(bienvenida);
-    localStorage.setItem("ultimoUsuario", "Pablo");
 } else {
-    let bienvenida=document.createElement("h3");
-    usuario.value=ultimoUsuario;
+    usuario[0].value=ultimoUsuario;
     let btnUsuario=document.createElement("a");
     btnUsuario.classList.add ("enlaceIngresar");
     btnUsuario.setAttribute("href", "./index.html")
@@ -37,5 +32,7 @@ if (!ultimoUsuario) {
     boxIngreso[0].appendChild(btnUsuario);
     btnUsuario.appendChild(pbtnUsuario);
     pbtnUsuario.innerText="No soy " + ultimoUsuario;
-    localStorage.removeItem("ultimoUsuario"); 
+    btnUsuario.addEventListener("click", function () {
+        localStorage.removeItem("ultimoUsuario");   
+    })
 }
