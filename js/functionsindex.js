@@ -7,12 +7,12 @@ let ultimoUsuario = localStorage.getItem ('ultimoUsuario');
 //corroborar usuario y contraseña//
 ingresar.addEventListener("click", function(){
     allClients.forEach(e => {
-        console.log(usuario[0].value)
         if (usuario[0].value==e.user&&contraseña[0].value==e.password) {    
             localStorage.setItem("ultimoUsuario", usuario[0].value);
             alert ("Permitir ingreso");
         } else {
             alert("No permitir ingreso")
+            
         }
     });
     }
@@ -34,5 +34,6 @@ if (!ultimoUsuario) {
     pbtnUsuario.innerText="No soy " + ultimoUsuario;
     btnUsuario.addEventListener("click", function () {
         localStorage.removeItem("ultimoUsuario");   
+        usuario[0].value=ultimoUsuario
     })
 }
