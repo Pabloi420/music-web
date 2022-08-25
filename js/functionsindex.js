@@ -3,20 +3,32 @@ let usuario=document.getElementsByClassName("inputUsuario");
 let boxIngreso=document.getElementsByClassName("boxIngreso");
 let contraseña=document.getElementsByClassName("inputContraseña");
 let ultimoUsuario = localStorage.getItem ('ultimoUsuario');
+let ingreso=false
 
 //corroborar usuario y contraseña//
 ingresar.addEventListener("click", function(){
     allClients.forEach(e => {
-        if (usuario[0].value==e.user&&contraseña[0].value==e.password) {    
-            localStorage.setItem("ultimoUsuario", usuario[0].value);
-            alert ("Permitir ingreso");
-        } else {
-            alert("No permitir ingreso")
-            
+        if (ingreso==false) {
+            if (usuario[0].value==e.user&&contraseña[0].value==e.password) {    
+                localStorage.setItem("ultimoUsuario", usuario[0].value);
+                ingreso=true;
+            } 
         }
     });
+    //usar ternario para practicar//
+    ingreso==true ? ingresar.setAttribute("href", "./menu.html") :
+        //generar mensaje de error sin redireccionar //
+        ingresar.removeAttribute("href", "./index.html")
+        mensajeError=document.createElement("h3");
+        mensajeError.innerText="Usuario y/o contraseña incorrecto";
+        boxIngreso[0].appendChild(mensajeError)
     }
 )
+
+
+/* si el usuario en storage no existe da bienvenida sino lo incorpora como valor en el input 
+y genera un boton indicando la posibilidad que no seas dicho usuario para vaciar el storage
+*/
 
 if (!ultimoUsuario) {
     let bienvenida=document.createElement("h3");

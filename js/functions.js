@@ -3,7 +3,24 @@ let recomendados=document.getElementsByClassName("recomendados");
 let tendencia=document.getElementsByClassName("tendencia");
 let buscador=document.getElementsByClassName("inputBuscador")[0];
 let seccion=document.getElementsByClassName("section");
+let contenido=document.getElementById("contenido")
 
+function crearContenido (){
+    let secciones = ["tusEscuchados", "recomendados", "soloHoy", "tendencia"]
+    let titulos=["Los que mas escuchas","Tus recomendados", "Recomendación del dia", "Tendencia"]
+    secciones.forEach((e, indice) => {
+        let section = document.createElement("div");
+        let titulo = document.createElement("h2");
+        contenido.appendChild(section);
+        section.appendChild(titulo);
+        section.classList.add ("section");
+        section.classList.add (e);
+        titulo.classList.add("separador");
+        titulo.innerHTML=titulos[indice]
+    });
+}
+
+window.addEventListener(onload, crearContenido())
 
 function crearSeccion (seccion, artistas) {
     artistas.forEach(e => {
@@ -20,40 +37,16 @@ function crearSeccion (seccion, artistas) {
         genero.classList.add("card-genre");
         let imagen=document.createElement("img");
         card.appendChild(imagen);
-        console.log(typeof(e.imagen))
         imagen.setAttribute("src", e.imagen)
         imagen.classList.add("imagen-card");
     })
 }
-/*
-function crearContenido () {
-    let contenido=document.createElement("div");
-    document.body.appendChild(contenido)
-    let secciones = ["tusEscuchados", "recomendados", "soloHoy", "tendencia"]
-    secciones.forEach(e => {
-        let section = document.createElement("div");
-        let titulo = document.createElement("h2");
-        contenido.appendChild(section);
-        section.appendChild(titulo);
-        section.classList.add ("section");
-        section.classList.add (e)
-    });
-}
 
 buscador.addEventListener("keyup", function(){
-    let palabraBuscada=buscador.value;
-    let existe=artistasTodos.filter(artista=>artista.nombre===palabraBuscada);
-    console.log(existe);
-})
-*/
-
-//pensar como incorporar imagenes dinamicamentes//
-
-buscador.addEventListener("keyup", function(){
-    for (const artista of artistasEscuchados) {
+    for (const artista of artistasTodos) {
         if (artista.nombre.toLowerCase().includes(buscador.value.toLowerCase())){
-            console.log(artista.nombre)
-        }
+            //remover contenido y generar cards de quien se busca
+        } 
     }
 })
 
