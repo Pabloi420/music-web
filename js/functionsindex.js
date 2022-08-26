@@ -16,12 +16,15 @@ ingresar.addEventListener("click", function(){
         }
     });
     //usar ternario para practicar//
-    ingreso==true ? ingresar.setAttribute("href", "./menu.html") :
-        //generar mensaje de error sin redireccionar //
+    if (ingreso==true) {
+        ingresar.setAttribute("href", "./menu.html")
+    } else {
         ingresar.removeAttribute("href", "./index.html")
         mensajeError=document.createElement("h3");
         mensajeError.innerText="Usuario y/o contraseña incorrecto";
         boxIngreso[0].appendChild(mensajeError)
+    }
+  
     }
 )
 

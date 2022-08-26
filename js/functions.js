@@ -43,12 +43,25 @@ function crearSeccion (seccion, artistas) {
 }
 
 buscador.addEventListener("keyup", function(){
-    for (const artista of artistasTodos) {
-        if (artista.nombre.toLowerCase().includes(buscador.value.toLowerCase())){
-            //remover contenido y generar cards de quien se busca
-        } 
+    if (buscador.value=="") {
+        crearContenido ()        
+        crearSeccion (masEscuchados, artistasEscuchados);
+        crearSeccion (recomendados, artistasRecomendados);
+        crearSeccion (tendencia, artistasTendencia);
     }
-})
+        else {
+        for (const artista of artistasTodos) {
+            if (artista.nombre.toLowerCase().includes(buscador.value.toLowerCase())){
+                while (contenido.firstChild) {
+                    contenido.removeChild(contenido.firstChild)
+                  }
+                let artistaEncontrado=artista;
+                console.log(artista)
+            } 
+        }
+        }
+    }
+)
 
 
 // mejorar con un ciclo //
